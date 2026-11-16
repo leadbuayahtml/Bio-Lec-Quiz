@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BIO 10 Study Guide + Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0c0c;--card:#141414;--ink:#f2f2f2;--mut:#8a8a8a;--line:#262626;--red:#e02424;--ok:#3ecf6e;--no:#ff5a5a;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f2ee;--card:#fff;--ink:#141414;--mut:#666;--line:#ddd;--ok:#16883f;--no:#c62828;color-scheme:light}}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Montserrat,system-ui,sans-serif}
+main{max-width:860px;margin:0 auto;padding:0 20px 80px}
+.sq{width:34px;height:34px;background:var(--red);margin:28px 0}
+.o{color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.hero{position:relative;padding:40px 0 70px;overflow:hidden}
+.hero small{color:var(--mut);letter-spacing:.08em}
+h1{font-weight:800;font-size:clamp(46px,13vw,120px);line-height:.95;margin:14px 0 0;letter-spacing:-.02em}
+.curve{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.bars{display:flex;gap:10px;align-items:flex-end;height:120px;margin-top:40px}
+.bars i{flex:1;background:linear-gradient(180deg,var(--red),#3a0b0b 70%,var(--card));opacity:.9}
+.bars i:nth-child(2n){background:linear-gradient(180deg,#555,var(--card))}
+nav{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 0}
+nav a{color:var(--ink);text-decoration:none;border:1px solid var(--line);padding:8px 14px;font-size:14px;font-weight:600}
+nav a:hover{border-color:var(--red);color:var(--red)}
+.lh{margin:90px 0 10px;border-top:1px solid var(--line);padding-top:30px}
+.lh .o{font-weight:800;font-size:clamp(60px,16vw,130px);line-height:1;display:block}
+.lh h2{font-size:14px;letter-spacing:.12em;text-transform:uppercase;margin:6px 0}
+.lh h2:after{content:"_";color:var(--red)}
+.ch{margin:36px 0;padding:26px;background:var(--card);border:1px solid var(--line)}
+.tag{color:var(--red);font-size:13px;font-weight:600}
+h3{font-size:clamp(24px,5vw,34px);font-weight:800;margin:6px 0 14px;line-height:1.15}
+ul{padding-left:18px;margin:0 0 22px}li{margin:8px 0}li::marker{color:var(--red)}
+.qz{border-top:1px solid var(--line);padding-top:20px}
+.meta{color:var(--mut);font-size:13px;margin:6px 0}
+.qq{font-weight:600;font-size:18px;margin:10px 0 14px}
+.big{font-size:44px;font-weight:800;margin-left:10px}
+button{font:inherit;cursor:pointer;color:var(--ink);background:transparent;border:1px solid var(--line);padding:11px 16px}
+button:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.op{display:block;width:100%;text-align:left;margin:8px 0}.op:hover:not(:disabled){border-color:var(--red)}
+.op.ok{border-color:var(--ok);color:var(--ok)}.op.no{border-color:var(--no);color:var(--no)}
+.go{background:var(--red);border-color:var(--red);color:#fff;font-weight:600;margin-top:10px}
+.bar{height:3px;background:var(--line)}.bar i{display:block;height:100%;background:var(--red)}
+input[type=text]{width:100%;font:inherit;padding:12px;margin:6px 0;color:var(--ink);background:var(--bg);border:1px solid var(--line)}
+input[type=text]:focus-visible{outline:3px solid var(--red)}
+.fb{margin:8px 0;padding:10px;border-left:3px solid var(--line)}.fb.ok{border-color:var(--ok);color:var(--ok)}.fb.no{border-color:var(--no)}
+.fb button{margin-left:8px;padding:5px 10px;font-size:13px}[hidden]{display:none!important}
+.row{margin:14px 0}
+footer{margin-top:80px;padding:26px;background:var(--card);color:var(--mut);font-size:14px}
+</style></head><body><main>
+<div class="sq"></div>
+<section class="hero">
+<svg class="curve" viewBox="0 0 800 400" preserveAspectRatio="none" aria-hidden="true"><path d="M0 330C200 330 260 60 520 140S760 120 800 60" fill="none" stroke="#e02424" stroke-width="1" opacity=".6"/></svg>
+<small>study guide + quiz · lectures 7–10</small>
+<h1>BIO 10</h1><h1 class="o">STUDY&nbsp;GUIDE</h1>
+<div class="bars" aria-hidden="true"><i style="height:50%"></i><i style="height:80%"></i><i style="height:100%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i></div>
+<nav aria-label="Lectures"><a href="#L7">07 life</a><a href="#L8">08 evolution</a><a href="#L9">09 systematics</a><a href="#L10">10 plants</a></nav>
+</section>
+<div id="app"></div>
+<footer>Read the key points, then drill that part by typing answers. Best scores are saved in this browser.</footer>
+</main>
+<script>
+const N={7:"Evolution I: Organization of Life",8:"Evolution",9:"Systematics and Biodiversity",10:"Plant Form and Function"};
+// [lecture, title, key points, questions as [question, correct, wrong, wrong, wrong]]
+const C=[
+[7,"Types of life and naming",[
+"Autotrophs make their own food (some bacteria, some protists, plants). Heterotrophs consume other organisms (some bacteria, some protists, fungi, animals).",
+"Unicellular: bacteria, protists, some fungi. Multicellular: some fungi, plants, animals.",
+"Prokaryotic cells have no nucleus (bacteria). Eukaryotic cells have one (protists, fungi, plants, animals).",
+"Viruses are acellular, just mobile genetic elements. Whether they are living is still debated.",
+"Linnaean hierarchy: Kingdom, Phylum, Class, Order, Family, Genus, Species.",
+"Binomial names are italicized (underlined if handwritten), with the Genus capitalized and the specific epithet lowercase."],
+[["Which group is acellular?","Viruses","Bacteria","Protists","Fungi"],
+["Which is the correctly written species name?","Escherichia coli","escherichia Coli","Escherichia Coli","ESCHERICHIA coli"],
+["Which level comes right after Phylum?","Class","Order","Family","Genus"],
+["Which group is prokaryotic?","Bacteria","Fungi","Protists","Animals"]]],
+[7,"Tree of life: archaea and bacteria",[
+"Taxonomy is the formal system for naming and classifying. Systematics also discovers species and reconstructs evolutionary relationships.",
+"A cladogram shows evolutionary relationships. A branch point is a node. A polytomy is a branch where more than two groups emerge.",
+"Three domains: Bacteria, Archaea, Eukarya. All trace back to LUCA, the Last Universal Common Ancestor.",
+"Archaea: prokaryotic, membranes of branched hydrocarbon chains joined to glycerol by ether linkages, no peptidoglycan, insensitive to bacterial antibiotics, unique rRNA.",
+"Archaea types: methanogens (strict anaerobes making CH4 from CO2 and H2), extreme halophiles (need high salt), hyperthermophiles (extreme heat).",
+"Bacteria: unbranched fatty acid chains with ester linkages, peptidoglycan cell walls (basis of the gram stain), sensitive to antibiotics."],
+[["What is a polytomy?","A branch from which more than two groups emerge","A branch point with exactly two groups","The common ancestor of all life","A diagram of gram stain results"],
+["Archaeal membranes are joined to glycerol by which linkage?","Ether","Ester","Peptide","Glycosidic"],
+["Which archaea make methane from CO2 and hydrogen?","Methanogens","Extreme halophiles","Hyperthermophiles","Proteobacteria"],
+["The gram stain is based on which feature of bacteria?","Peptidoglycan in the cell wall","Nucleus shape","Flagella number","Chitin content"]]],
+[7,"Protists, fungi, plants and animals",[
+"Protists: mostly eukaryotic microbes, including green and red algae. Archaeplastida use plastids from an endosymbiosis between a heterotrophic protist and a cyanobacterium.",
+"Stramenopiles have a hairy flagellum. Alveolates have sacs (alveoli) under the plasma membrane. Rhizaria have thread-like pseudopodia. Excavata have a feeding groove (Giardia).",
+"Fungi: eukaryotic, non-motile, heterotrophic, no chlorophyll, chitin cell walls, reproduce by spores. Nutrition can be saprophytic, parasitic or symbiotic (lichens, mycorrhiza).",
+"Fungal groups: Zygomycetes, Ascomycetes (sac fungi, e.g. Saccharomyces), Basidiomycetes (mushrooms), Deuteromycetes (imperfect fungi, molds).",
+"Plants: photoautotrophic and non-motile. Non-vascular (moss, liverwort, hornwort) versus vascular with xylem and phloem (ferns, gymnosperms, angiosperms).",
+"Animals: multicellular heterotrophs with no cell walls. Classified by level of organization, symmetry, germ layers (diploblastic or triploblastic), coelom, segmentation and notochord."],
+[["Which fungal component is the major part of the cell wall?","Chitin","Peptidoglycan","Cellulose","Lignin"],
+["Which fungal group are the sac fungi?","Ascomycetes","Zygomycetes","Basidiomycetes","Deuteromycetes"],
+["Which tissue carries water from roots to the shoot?","Xylem","Phloem","Pith","Epidermis"],
+["A coral polyp has which symmetry?","Radial","Bilateral","None","Asymmetrical"]]],
+[7,"Animal levels and phyla",["Levels of organization: protoplasmic (unicellular, e.g. protozoa), cellular (functionally differentiated aggregates, division of labor), tissue (cells in a definite pattern), organ (specialized functions), organ system (organs working together).","Diploblastic animals have two germ layers; triploblastic have three. Body cavity: coelomates (true coelom), acoelomates (none, e.g. flatworms), pseudocoelomates (false coelom).","Animal phylogeny (molecular data): Mesozoa; Parazoa (Porifera, Placozoa); Eumetazoa, which splits into Radiata (Cnidaria, Ctenophora) and Bilateria. Bilateria: Protostomia (Lophotrochozoa, Ecdysozoa) and Deuterostomia (Chordata, Hemichordata, Echinodermata).","Phyla: Porifera (sponges), Cnidaria (jellyfish, anemones), Ctenophora (comb jellies), Platyhelminthes (flatworms), Rotifera (wheel animals), Nemertea (ribbon worms), Mollusca (octopus, squid, snails, mussels), Annelida (segmented worms), Nematoda (roundworms), Tardigrada (water bears), Arthropoda (insects; dominates the kingdom), Echinodermata (starfish, sea urchins, sand dollars), Chordata (vertebrates).","Key features: Cnidaria have stinging nematocysts and radial symmetry; Arthropoda have a jointed body and an exoskeleton of protein and chitin; Echinodermata have a unique water vascular system and an endoskeleton; Chordata have a notochord."],
+[["Which phylum are the water bears?","Tardigrada","Nemertea","Rotifera","Annelida"],["Animals with two germ layers are…","Diploblastic","Triploblastic","Acoelomate","Pseudocoelomate"],["Which group belongs to Deuterostomia?","Echinodermata","Mollusca","Arthropoda","Annelida"],["Which phylum has a unique water vascular system?","Echinodermata","Cnidaria","Nematoda","Porifera"]]],
+[8,"Darwin and natural selection",[
+"Evolution is a change in the genetic composition of a population over time, meaning a change in allele frequencies.",
+"Darwin left on the Beagle in 1831 at age 22, as ship’s naturalist, collecting specimens and making observations.",
+"Reading Malthus (human populations grow faster than food supplies) led Darwin to link natural selection with overreproduction.",
+"Natural selection increases adaptation. Individuals do not evolve; populations do.",
+"Selection only works on heritable traits. Acquired traits are not heritable."],
+[["Whose paper on population growth influenced Darwin?","Thomas Malthus","Stephen Jay Gould","Carl Linnaeus","Luis Alvarez"],
+["What evolves?","Populations","Individuals","Single cells only","Acquired traits"],
+["Why are acquired traits not subject to natural selection?","They are not heritable","They are always harmful","They only occur in plants","They are too rare"]]],
+[8,"Evidence and speciation",[
+"Fossils are remnants of past life: insects in amber, petrified parts, molds, casts, trackways, fossilized excrement.",
+"Horse evolution from the Eocene (57.8 MYA): body size increased, toes decreased, teeth gained a larger grinding surface.",
+"Common descent: all organisms descend from a single ancestral form, shown as a branching tree called a phylogeny.",
+"Allopatric speciation (another land): separate geographic areas, through vicariance (barriers fragment habitat) or founder events (a few individuals disperse far away).",
+"Sympatric speciation (same land): within one area, such as a lake, as individuals specialize on food or shelter. Parapatric: ranges mostly separate but touching along a border.",
+"Adaptive radiation: ecologically diverse species from a common ancestor, common on lakes and islands (Galápagos finches)."],
+[["Which trend describes horse evolution?","Fewer toes","More toes","Smaller body size","Smaller grinding surface"],
+["A few individuals disperse to a distant place with no others of their species. This is a…","Founder event","Vicariant event","Mass extinction","Point mutation"],
+["Speciation within one lake is called…","Sympatric","Allopatric","Parapatric","Vicariant"],
+["Galápagos finches are an example of…","Adaptive radiation","Mass extinction","Polymorphism","Fixation"]]],
+[8,"Mutation to mass extinction",[
+"Microevolution is a change in allele frequencies. A gene pool is all alleles of all genes in a population. Polymorphism means several allelic forms exist.",
+"Variation comes from mutation and sexual recombination. New alleles arise only by mutation, a change in the nucleotide sequence of DNA.",
+"Point mutations (one base pair) are often harmless: much DNA is non-coding and the code is redundant (CGU, CGA, CGC and CGG all code for arginine). Occasionally significant, as in sickle cell disease. Beneficial mutations are rare.",
+"Gould’s tiers of time: tens to thousands of years (population genetics), millions (speciation and extinction), tens to hundreds of millions (episodic mass extinctions).",
+"Permian extinction (~225 MYA): about half the families of shallow-water marine invertebrates and 90% of marine invertebrate species. Cretaceous (65 MYA): end of the dinosaurs.",
+"Alvarez hypothesis: asteroid bombardment sent debris into the atmosphere and altered climate. Evidence: craters and atypical iridium."],
+[["New alleles arise only through…","Mutation","Sexual recombination","Natural selection","Gene flow"],
+["Why are many point mutations harmless?","The genetic code is redundant","They always repair themselves","They only occur in RNA","They are always beneficial"],
+["Which evidence supports the Alvarez hypothesis?","Atypical iridium concentrations","Horse fossils","Finch beak shapes","Gram stain results"],
+["The Permian extinction killed about what share of marine invertebrate species?","90%","10%","50% of all plants","Only dinosaurs"]]],
+[9,"What systematics and taxonomy cover",[
+"Systematics comes from the Greek systema, meaning together. Linnaeus published Systema Naturae in 1735.",
+"Scope: populations, species and higher taxa. Three major areas: taxonomy, phylogeny and biosystematics.",
+"Aims: inventory the world’s organisms, provide a method for identification and communication, produce a universal classification, and show the evolutionary implications of biodiversity.",
+"Taxonomy includes description, identification, nomenclature and classification.",
+"Description assigns features or attributes. Identification determines that an organism belongs to a recognized taxon. Nomenclature is the rules for naming taxa. Classification groups organisms into progressively more inclusive groups.",
+"Conservation steps: save it, characterize it, sustainably use it."],
+[["Linnaeus’s 1735 book was titled…","Systema Naturae","Origin of Species","Zoology","Species Plantarum"],
+["Which is NOT part of taxonomy?","Fossil dating","Description","Identification","Nomenclature"],
+["Identification means…","Determining that an organism belongs to a recognized taxon","Inventing new names","Drawing evolutionary trees","Collecting fossils"],
+["Assigning features or attributes to an organism is called…","Description","Nomenclature","Classification","Biosystematics"]]],
+[9,"Keys, identification and names",[
+"A taxonomic key is organized descriptions of species, often published with pictures.",
+"A dichotomous key (divided into two parts) presents pairs of alternative features; the user picks the one that fits, and the organism is identified by elimination.",
+"Keys can be a branching flowchart (diagrammatic) or numbered paired statements (descriptive).",
+"Traditional identification follows Linnaeus’s binomial system. Modern keys are computerized.",
+"Nomenclature is the formal naming of taxa, the language for biodiversity. Binomial: Genus species.",
+"Common names vary and mislead: mountain lion, puma, catamount and cougar are all Puma concolor. A jellyfish is not a fish; a seahorse is. A sea cucumber is an animal."],
+[["A dichotomous key presents…","Pairs of alternative features","A list of common names","Gene sequences","A single trait"],
+["Which two formats can a dichotomous key take?","Flowchart or numbered paired statements","Bar graph or pie chart","Karyotype or pedigree","Table or timeline"],
+["Mountain lion, puma, catamount and cougar share which scientific name?","Puma concolor","Felis lion","Panthera cougar","Cougar puma"],
+["Why use a universal scientific name?","Common names vary and can mislead","Latin is shorter","Common names are banned","It shows the animal’s age"]]],
+[9,"Scientific names and species concepts",["Scientific names are the language for biodiversity: they replace long descriptions, allow prediction (e.g. alkaloids across the nightshade family), and represent hypotheses, not proven facts, so they can change.","The medieval polynomial system used long Latin descriptive phrases (up to 12 or more words). Problems: hard to remember, and different scientists described different characteristics. Linnaeus’s short-hand designations became the binomial system.","Binomial name (binomen): Genus (capitalized) plus specific epithet (lowercase), in Latin, italicized or underlined. The epithet is an adjective matching the genus’s gender, or a noun in apposition. Homo sapiens means wise man.","Biological species concept: actually or potentially interbreeding populations producing viable, fertile offspring. It cannot be applied to fossils or asexual prokaryotes. Morphological concept: phenotypic differences (fossils). Evolutionary concept: evolutionary lineages.","Below species (horticulture): subspecies (subsp.), variety (var.), subvariety (subvar.), forma (f.), subforma (subf.).","Codes of nomenclature: algae, fungi and plants; zoological; prokaryotes (formerly bacteria); cultivated plants; phytosociological. The ICTV handles virus names."],
+[["In a binomial name, the specific epithet is…","Lowercase","Capitalized","Always a noun","Written first"],["The biological species concept cannot easily be applied to…","Fossils and asexual prokaryotes","Birds","Flowering plants only","Mammals"],["A main problem of the polynomial system was…","Names were too long to remember","It used no Latin","It had only two words","It ignored plants"],["Scientific names are best described as…","Hypotheses open to change","Proven facts","Common names","Permanent labels"]]],
+[9,"History of classification",["Aristotle (384–322 BC) first classified organisms: plants (trees, shrubs, herbs) and animals (land, water, air dwellers).","Greeks and Romans expanded this into basic units (cats, horses, oaks) called genera, Latin for groups: Felis, Equus, Quercus. Theophrastus (371–287 BC) wrote Historia Plantarum.","Linnaeus (1707–1778): two kingdoms, Plantae and Animalia. Haeckel (1866): three kingdoms, adding Protista. Copeland (1938): four kingdoms, adding Monera (bacteria).","Stanier and van Niel (1960s) proposed a rank above kingdom. Whittaker (1969): five kingdoms based on nutrition (saprotroph, autotroph, heterotroph). Carl Woese: three domains from rRNA genetic studies.","The taxonomic hierarchy groups species by genetic and phylogenetic characteristics; Linnaeus’s levels are called taxons, with domain added at the top."],
+[["Who proposed the five-kingdom system based on nutrition?","Whittaker","Haeckel","Copeland","Linnaeus"],["Who added the kingdom Protista in 1866?","Haeckel","Aristotle","Woese","Whittaker"],["The three-domain system is based on…","rRNA genetic studies","Leaf shape","Nutrition","Habitat"],["The word genera means…","Groups","Species","Kingdoms","Names"]]],
+[10,"Plant body and roots",[
+"Vegetative organs: roots, stems, leaves. Roots anchor the plant, absorb water and minerals, and produce hormones. Root hairs (from epidermal cells) greatly increase absorption.",
+"Monocots: one cotyledon, parallel leaf venation. Eudicots: two cotyledons, netted venation.",
+"Root functions: anchorage, storage, absorption, conduction.",
+"By origin: primary (tap) root from the radicle; secondary (branch) roots from the pericycle; adventitious roots from anything other than the radicle.",
+"Tap root systems are typical of dicots; fibrous root systems of monocots.",
+"Specialized roots: prop or aerial, food storage, photosynthetic. Symbiotic: legume root nodules (nitrogen-fixing bacteria) and mycorrhizae (fungus roots)."],
+[["Which is a monocot feature?","Parallel leaf venation","Netted venation","Two cotyledons","Tap root system"],
+["Adventitious roots arise from…","Anything other than the radicle","Only the radicle","The cotyledons","The pericycle only"],
+["Legume root nodules house bacteria that…","Fix atmospheric nitrogen","Make chlorophyll","Produce spores","Store starch"],
+["Mycorrhizae are a symbiosis between a plant and a…","Fungus","Bacterium","Virus","Alga"]]],
+[10,"Stems and leaves",[
+"The shoot system is stem, branches and leaves. Nodes are where leaves attach; an internode is the region between nodes.",
+"Stem functions: support leaves, store minerals, transport water and solutes between roots and leaves.",
+"The stem has three tissues: epidermal, vascular and ground.",
+"Modified stems include bulbs (storage, e.g. onion), thorns, and photosynthetic stems.",
+"Leaves are the major site of photosynthesis. Parts: blade (wide portion), petiole (stalk) and leaf axil, where the axillary bud forms. Tendrils attach to objects.",
+"Simple leaves have one blade per node; compound leaves have multiple leaflets. Leaf design: sun exposure, large surface area, gas exchange (CO2 in, O2 out)."],
+[["The region between two nodes is the…","Internode","Petiole","Axil","Blade"],
+["The stalk that attaches the leaf blade to the stem is the…","Petiole","Midrib","Node","Tendril"],
+["A compound leaf has…","Multiple leaflets","One blade per node only","No blade","Only tendrils"],
+["Which is NOT one of the three stem tissues?","Reproductive tissue","Epidermal tissue","Vascular tissue","Ground tissue"]]],
+[10,"Leaf anatomy and modifications",["The blade is broad and thin: it maximizes surface area, minimizes volume, and shortens the distance gases diffuse.","Leaf design: sun exposure, large surface area, gas exchange (CO2 in, O2 out), import of water and minerals, export of fixed carbon to sinks, control of water loss, resistance to stresses.","Epidermal cells usually lack chloroplasts and are covered by a waxy cuticle secreted by the epidermis, impermeable to water. Specialized epidermal cells: trichomes (leaf hairs) and guard cells, which form stomata.","Stomata (Greek for mouth) are pores leading to intercellular spaces, on both adaxial (upper) and abaxial (lower) surfaces. They regulate gas exchange and open or close with environmental signals.","Modified leaves: bracts (near reproductive structures), insect-trapping leaves (pitcher plants, Nepenthes), tendrils for climbing (thigmotropism), spines (cactus; protection), reproductive leaves (kataka-taka), storage leaves (bulb scales)."],
+[["Which cells form stomata?","Guard cells","Trichomes","Palisade cells","Root hairs"],["The leaf cuticle is…","Waxy and impermeable to water","Full of chloroplasts","Made of guard cells","Found only on roots"],["A tendril’s response to touch is called…","Thigmotropism","Phototropism","Gravitropism","Hydrotropism"],["Cactus spines are modified…","Leaves","Roots","Seeds","Flowers"]]],
+[10,"Flowers",["A flower is a reproductive shoot, usually of four whorls, on a flower stalk (peduncle).","Sepals: outermost green whorl, collectively the calyx, protect the bud. Petals: colored second whorl, collectively the corolla, attract pollinators. Perianth = calyx plus corolla; tepals when sepals and petals look alike (water lilies).","Receptacle: stem axis holding the flower parts. Pedicel: flower stalk; peduncle is the main stalk of a solitary flower or inflorescence.","Pistil/carpel (gynoecium, female): stigma (receives pollen), style (connects stigma to ovary), ovary (contains ovules, rudimentary seeds). Simple pistil = one carpel; compound = fused carpels.","Stamen (androecium, male): filament, anther, and pollen grains."],
+[["All the sepals together are called the…","Calyx","Corolla","Androecium","Gynoecium"],["Where do pollen grains land?","Stigma","Filament","Receptacle","Sepal"],["The male parts together are the…","Androecium","Gynoecium","Perianth","Calyx"],["Tepals occur when…","Sepals and petals look alike","A flower has no ovary","Stamens fuse","Fruits split open"]]],
+[10,"Fruits",["A fruit is a ripened ovary (or ovaries) with seeds; its main function is seed dispersal. Locules are cavities where seeds form. The pericarp (ripened ovary wall) has exocarp (outer), mesocarp (middle) and endocarp (inner, surrounds the locules).","Simple fruit: one ovary of one flower. Aggregate: one flower with many separate carpels. Multiple: carpels of several flowers in one inflorescence. Accessory: receptacle or floral tube becomes part of the fruit.","Simple fleshy: berry (papaya), pepo (squash, hard exocarp), hesperidium (lemon, leathery rind), drupe (coconut, hard stony endocarp), pome (apple, fleshy receptacle tissue).","Dry dehiscent (split open): capsule (compound ovary), legume (one carpel, two seams), follicle (one carpel, one seam), silique (two carpels, partition wall), silicle (a short silique).","Dry indehiscent (stay closed): achene, caryopsis or grain (seed coat fused to ovary), samara (winged), nut (hard, one seeded), schizocarp (splits into mericarps)."],
+[["Which fruit is a pepo?","Squash","Apple","Lemon","Coconut"],["A legume splits along…","Two seams","One seam","No seams","Three seams"],["In a caryopsis (grain), the seed coat is…","Fused with the ovary wall","Winged","Separable from the ovary","Stony"],["The innermost pericarp layer is the…","Endocarp","Exocarp","Mesocarp","Receptacle"]]]
+];
+const $=s=>document.querySelector(s);
+const sh=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]);
+let best={};try{best=JSON.parse(localStorage.getItem("b10q")||"{}")}catch(e){}
+const sv=()=>{try{localStorage.setItem("b10q",JSON.stringify(best))}catch(e){}};
+let h="",cur=0,part=0;
+C.forEach((c,i)=>{
+ if(c[0]!=cur){cur=c[0];part=0;h+=`<header class="lh" id="L${cur}"><span class="o">${String(cur).padStart(2,"0")}</span><h2>${N[cur]}</h2></header>`}
+ part++;
+ h+=`<section class="ch"><div class="tag">// part ${part} · ${c[2].length} key points</div><h3>${c[1]}</h3><ul>${c[2].map(p=>`<li>${p}</li>`).join("")}</ul><div class="qz" id="q${i}"></div></section>`});
+$("#app").innerHTML=h;
+const Q={};
+const sets=i=>{const a=IT[i],o=[];for(let j=0;j<a.length;j+=10)o.push(a.slice(j,j+10));if(o.length>1&&o[o.length-1].length<5){const l=o.pop();o[o.length-1]=o[o.length-1].concat(l)}return o};
+const ids=(i,k)=>run($("#q"+i),sets(i)[k],"i"+i+"s"+k,()=>idle(i));
+function idle(i){$("#q"+i).innerHTML=sets(i).map((x,k)=>`<button class="go" onclick="ids(${i},${k})">set ${k+1} · ${x.length}${best["i"+i+"s"+k]!=null?" · "+best["i"+i+"s"+k]+"%":""}</button>`).join(" ")+` <button onclick="st(${i})">multiple choice</button>`}
+function st(i){Q[i]={l:sh(C[i][3]),n:0,s:0};ask(i)}
+function ask(i){const q=Q[i],x=q.l[q.n];q.a=x[1];
+ $("#q"+i).innerHTML=`<div class="bar"><i style="width:${q.n/q.l.length*100}%"></i></div><div class="meta">question ${q.n+1} / ${q.l.length}</div><p class="qq">${x[0]}</p>`+sh(x.slice(1)).map(t=>`<button class="op" onclick="pk(${i},this)">${t}</button>`).join("")+`<div id="f${i}"></div>`}
+function pk(i,b){const q=Q[i],ok=b.textContent==q.a;if(ok)q.s++;
+ b.parentNode.querySelectorAll(".op").forEach(e=>{e.disabled=true;if(e.textContent==q.a)e.classList.add("ok")});
+ if(!ok)b.classList.add("no");
+ $("#f"+i).innerHTML=`<button class="go" onclick="nx(${i})">${q.n+1<q.l.length?"next":"results"} →</button>`}
+function nx(i){const q=Q[i];q.n++;if(q.n<q.l.length)return ask(i);
+ const p=Math.round(q.s/q.l.length*100);if(!(best[i]>=p)){best[i]=p;sv()}
+ $("#q"+i).innerHTML=`<p class="qq">${q.s} / ${q.l.length}<span class="o big">${p}%</span></p><div class="meta">best ${best[i]}% · re-read the key points above if you missed any</div><button class="go" onclick="st(${i})">retry_</button>`}
+const ID=[`Organisms that can produce their own food=>Autotrophic|Autotroph
+Organisms that consume other organisms for food=>Heterotrophic|Heterotroph
+Plants are autotrophic; fungi and animals are=>Heterotrophic|Heterotroph
+Composed of only one cell=>Unicellular
+Composed of many cells=>Multicellular
+Cells that do not possess a nucleus=>Prokaryotic|Prokaryote
+Cells that possess a nucleus=>Eukaryotic|Eukaryote
+The prokaryotic group (besides archaea)=>Bacteria
+Acellular mobile genetic elements=>Viruses|Virus
+Term for not being made up of cells=>Acellular
+Level right after Kingdom=>Phylum
+Level right after Phylum=>Class
+Level right after Class=>Order
+Level right after Order=>Family
+Level right after Family=>Genus
+Most specific Linnaean level=>Species
+Two-word naming system=>Binomial nomenclature
+First word of a species name=>Genus
+Second word of a species name=>Specific epithet|Species epithet|Epithet
+The genus name is written=>Capitalized|First letter capitalized
+The specific epithet is written in=>Lowercase
+Species names are italicized, or if handwritten=>Underlined`,
+`Formal system for naming and classifying species=>Taxonomy
+Discovering species and reconstructing their evolutionary relationships=>Systematics
+Diagram of evolutionary relationships=>Cladogram
+Branch point on a cladogram=>Node
+Branch from which more than two groups emerge=>Polytomy
+Last Universal Common Ancestor (abbreviation)=>LUCA
+Root of the tree of life=>LUCA|Last Universal Common Ancestor
+Domain whose cell walls contain peptidoglycan=>Bacteria
+Prokaryotic domain insensitive to bacterial antibiotics=>Archaea
+Archaeal membrane linkage to glycerol=>Ether
+Bacterial membrane linkage to glycerol=>Ester
+Archaeal membrane chains=>Branched hydrocarbon chains|Branched hydrocarbon
+Bacterial membrane chains=>Unbranched fatty acid chains|Unbranched fatty acid
+Cell wall component absent in archaea=>Peptidoglycan
+Bacterial wall component that is the basis of the gram stain=>Peptidoglycan
+Strict anaerobes that make methane from CO2 and hydrogen=>Methanogens
+Archaea needing high salt concentrations=>Extreme halophiles|Halophiles
+Archaea living in extremely hot environments=>Hyperthermophiles
+Formula of methane=>CH4
+Gram-positive bacteria are subdivided by=>G+C content|GC content
+Pyrodictium abyssi belongs to which domain=>Archaea
+Staphylococcus aureus is gram-=>Positive
+Bacteria are sensitive or insensitive to antibiotics=>Sensitive
+Bacteria are classified by shape, arrangement, staining, growth in culture medium, and=>Gene sequencing`,
+`Protist group using plastids from endosymbiosis with a cyanobacterium=>Archaeplastida
+Protist group with a hairy flagellum=>Stramenopiles
+Protist group with membrane-enclosed sacs under the plasma membrane=>Alveolates|Alveolata
+The sacs under the plasma membrane=>Alveoli
+Protists with thread-like or root-like pseudopodia=>Rhizaria
+Protist group with feeding grooves (Giardia)=>Excavata
+Protist group that converts cytoplasm into pseudopodia=>Amoebozoa
+Chromalveolata ancestor engulfed a single-celled photosynthetic=>Red alga
+Major component of the fungal cell wall=>Chitin
+Fungi reproduce by means of=>Spores
+Pigment that fungi lack=>Chlorophyll
+Fungi feeding on dead organic substances=>Saprophytic
+Fungi living on other living organisms=>Parasitic
+Mutually beneficial fungal nutrition=>Symbiotic
+Symbiotic fungus-plant root association=>Mycorrhiza|Mycorrhizae
+Sac fungi=>Ascomycetes
+Mushroom fungi=>Basidiomycetes
+Fungi with zygospores=>Zygomycetes
+Asexual spores of Zygomycetes=>Sporangiospores
+Sexual spores of Ascomycetes=>Ascospores
+Sexual spores of Basidiomycetes=>Basidiospores
+Imperfect fungi=>Deuteromycetes
+Zygomycete hyphae are without=>Septa
+Ascomycete example genus=>Saccharomyces
+Basidiomycete example genus=>Agaricus
+Deuteromycete example genus=>Trichoderma
+Parasitic fungi examples: Taphrina and=>Puccinia
+Plant tissue carrying water from roots to shoot=>Xylem
+Plant tissue carrying solutes from leaves down to roots=>Phloem
+Tissue of dead cells with two cell wall layers=>Sclerenchyma
+Seedless vascular plants=>Ferns|Ferns and fern-allies
+Seed plants: gymnosperms and=>Angiosperms
+Nonvascular plants rely on diffusion and=>Osmosis
+Animal cells lack=>Rigid cell walls|Cell walls
+Rod-like structure that becomes the backbone=>Notochord
+Symmetry of a beetle=>Bilateral
+Symmetry of a coral polyp=>Radial
+Symmetry of a sponge=>None|Asymmetrical
+Animals with three germ layers=>Triploblastic`,
+`Unicellular animal-like level of organization=>Protoplasmic
+Functionally differentiated cell aggregates=>Cellular level|Cellular
+Cells organized in a definite pattern=>Tissue level|Tissue
+Organs working together=>Organ system level|Organ system
+Animals with two germ layers=>Diploblastic
+Animals without a body cavity=>Acoelomates|Acoelomate
+Animals with a false coelom=>Pseudocoelomates|Pseudocoelomate
+Sponges=>Porifera
+Jellyfish and sea anemones=>Cnidaria
+Comb jellies or sea walnuts=>Ctenophora
+Flatworms=>Platyhelminthes
+Wheel animals=>Rotifera
+Ribbon worms=>Nemertea
+Octopus, squid, snails, mussels=>Mollusca
+Segmented worms=>Annelida
+Roundworms=>Nematoda
+Water bears=>Tardigrada
+Phylum that dominates the Animal Kingdom=>Arthropoda
+Starfish, sea urchins, sand dollars=>Echinodermata
+Phylum of vertebrates=>Chordata
+Stinging structures of Cnidaria=>Nematocysts|Cnidocytes
+Arthropod exoskeleton is protein and=>Chitin
+Unique system of echinoderms=>Water vascular system
+Branch A of animal phylogeny=>Mesozoa
+Branch B (sponges and Placozoa)=>Parazoa
+Branch C (all other phyla)=>Eumetazoa
+Grade of Cnidaria and Ctenophora=>Radiata
+Protostome group with Mollusca and Annelida=>Lophotrochozoa
+Protostome group with Arthropoda and Nematoda=>Ecdysozoa
+Division with Chordata, Hemichordata, Echinodermata=>Deuterostomia`,
+`Change in genetic composition of a population over time=>Evolution
+Evolution as a change in the frequency of certain=>Alleles
+Ship Darwin sailed on=>Beagle|HMS Beagle
+Year Darwin set out=>1831
+Darwin’s age at departure=>22
+Darwin’s role on the ship=>Naturalist|Ship’s naturalist
+Length of the voyage=>Five years|5 years
+Author whose paper on food resources influenced Darwin=>Malthus|Thomas Malthus
+Ability of populations to produce more offspring than survive=>Overreproduce|Overreproduction
+What evolves: individuals or populations=>Populations
+Process that increases adaptation to the environment=>Natural selection
+Natural selection works only on=>Heritable traits
+Traits not heritable and not subject to selection=>Acquired traits`,
+`Remnants of past life preserved in the earth=>Fossils
+Insects preserved whole in=>Amber
+Petrified skeletal parts are infiltrated with minerals or=>Silica
+Fossilized waste=>Excrement|Fossilized excrement
+Horse evolution began in this epoch=>Eocene
+Age of the Eocene horses=>57.8 MYA
+Horse body size trend=>Increasing
+Horse foot trend=>Fewer toes
+Horse tooth trend=>Larger grinding surface
+Branching tree of life history=>Phylogeny
+Darwin: all organisms descended from a single=>Ancestral form|Common ancestor
+Formation of new species=>Speciation
+Speciation in separate geographic areas=>Allopatric
+Speciation in the same geographic area=>Sympatric
+Speciation along a shared border=>Parapatric
+Allopatric means=>Another land
+Sympatric means=>Same land
+Barriers form when climate or geology fragments habitat=>Vicariant speciation|Vicariance
+A few individuals disperse to a distant place=>Founder event|Founder events
+Reproductive barriers prevent species from=>Interbreeding
+Production of ecologically diverse species from a common ancestor=>Adaptive radiation
+Island group used as the example=>Galápagos Islands|Galapagos
+Adaptive radiation is common in lakes and=>Islands`,
+`Change in allele frequency in a population=>Microevolution
+Occurrence of different allelic forms=>Polymorphism
+All alleles of all genes in a population=>Gene pool
+Single allele in a population, so all homozygous=>Fixed
+Two processes providing variation=>Mutation and sexual recombination
+Only source of new alleles=>Mutation
+Change in the nucleotide sequence of DNA=>Mutation
+Change in a single base pair=>Point mutation
+Genetic code feature that makes point mutations harmless=>Redundant|Redundancy
+CGU, CGA, CGC, CGG code for=>Arginine
+Disease from a significant point mutation=>Sickle cell disease|Sickle cell
+Beneficial mutations are=>Rare
+Grand-scale events in evolution=>Macroevolution
+Scientist with three tiers of time=>Gould|Stephen Jay Gould
+Tier of tens to thousands of years=>Population genetic processes
+Tier of millions of years=>Speciation and extinction
+Tier of tens to hundreds of millions of years=>Mass extinctions|Episodic mass extinctions
+Time of the Permian extinction=>225 MYA
+Share of marine invertebrate species lost in the Permian=>90%
+Time of the Cretaceous extinction=>65 MYA
+Cretaceous extinction ended the=>Dinosaurs
+Asteroid bombardment hypothesis=>Alvarez hypothesis|Alvarez
+Evidence: craters and atypical concentrations of=>Iridium
+Lineages with high speciation and low extinction produce the greatest=>Diversity`,
+`Meaning of Greek systema=>Together
+Linnaeus’s 1735 book=>Systema Naturae
+Assignment of features or attributes=>Description
+Determining an organism belongs to a recognized taxon=>Identification
+Rules and conventions governing names of taxa=>Nomenclature
+Grouping organisms into progressively more inclusive groups=>Classification
+Taxonomy: description, identification, nomenclature, and=>Classification
+Most important step in conserving biodiversity=>Characterization
+Conservation approach: save it, characterize it, and=>Sustainably use it
+Systematics defined as the science of diversity of organisms by=>Ernst Mayr|Mayr
+Systematics aim: inventory the world’s=>Organisms|Flora and fauna
+Step described as how something looks like=>Description
+Step described as finding out what something is=>Identification
+Aim: show the evolutionary implications of=>Biodiversity`,
+`Organized descriptions of species characteristics=>Taxonomic key
+Key divided into two parts=>Dichotomous key
+Dichotomous key presents pairs of alternative=>Morphological features|Dichotomies
+Organism identified by a process of=>Elimination
+Key format as a branching flowchart=>Diagrammatic
+Key format as numbered paired statements=>Descriptive
+Traditional identification follows Linnaeus’s two-name system=>Binomial nomenclature
+Modern identification keys are=>Computerized
+Formal naming of taxa=>Nomenclature
+Scientific name of mountain lion=>Puma concolor
+A jellyfish is not a=>Fish
+A sea cucumber is a=>Animal
+UK buzzard refers to a=>Hawk
+US buzzard refers to a=>Vulture
+Names that let scientists discuss the same organism=>Scientific names`,
+`Scientific names allow=>Prediction
+Scientific names represent=>Hypotheses
+Medieval naming system of long Latin phrases=>Polynomial system|Polynomial
+Polynomial names used up to how many words=>12
+Poly means=>Many
+Linnaeus’s short-hand designation became the=>Binomial system|Binomial
+Binomial name: genus plus=>Specific epithet
+Homo sapiens means=>Wise man
+Epithet is an adjective or a noun in=>Apposition
+Interbreeding populations with viable, fertile offspring=>Biological species concept
+Species concept based on phenotypic differences=>Morphological species concept
+Species concept based on lineages=>Evolutionary species concept
+Abbreviation for subspecies=>subsp.|subsp
+Abbreviation for variety=>var.|var
+Abbreviation for subvariety=>subvar.|subvar
+Abbreviation for forma=>f.|f
+Abbreviation for subforma=>subf.|subf
+Committee that publishes virus names=>ICTV|International Committee on Taxonomy of Viruses
+Bacteria code was renamed Code of Nomenclature of=>Prokaryotes`,
+`First to classify organisms=>Aristotle
+Aristotle’s plant groups: trees, shrubs, and=>Herbs
+Aristotle’s animal groups: land, water, and=>Air
+Basic units named by Greeks and Romans=>Genera|Genus
+Genera means=>Groups
+Author of Historia Plantarum=>Theophrastus
+Linnaeus’s number of kingdoms=>Two|2
+Latin word for kingdom used by Linnaeus=>Regnum
+Year of Haeckel’s three kingdoms=>1866
+Kingdom added by Haeckel=>Protista
+Year of Copeland’s four kingdoms=>1938
+Kingdom added by Copeland=>Monera
+Year of Whittaker’s five kingdoms=>1969
+Whittaker’s kingdoms were based on=>Nutrition
+Scientist who proposed three domains=>Woese|Carl Woese
+Woese used genetic studies of=>rRNA
+Taxonomic groups in the Linnaean system are called=>Taxons|Taxa`,
+`Three vegetative organs=>Roots, stems, leaves
+Projections of epidermal root cells=>Root hairs
+Single cotyledon=>Monocots|Monocot
+Two cotyledons=>Eudicots|Eudicot
+Parallel leaf venation=>Monocots|Monocot
+Netted leaf venation=>Eudicots|Eudicot
+Cotyledons act as transfer tissue in=>Monocots|Monocot
+Cotyledons supply nutrients to seedlings in=>Eudicots|Eudicot
+Root vascular tissue in a ring=>Monocots|Monocot
+Root phloem between xylem arms=>Eudicots|Eudicot
+Root functions: anchorage, storage, absorption, and=>Conduction
+Primary root derived from the=>Radicle
+Another name for primary root=>Tap root
+Branch roots arise from the=>Pericycle
+Roots from anything other than the radicle=>Adventitious roots|Adventitious
+Adventitious roots originate from=>Parenchyma tissues|Parenchyma
+Root system of dicots=>Tap root system|Tap root
+Root system of monocots=>Fibrous root system|Fibrous
+Root system with no distinct primary root=>Fibrous
+Roots of epiphytes growing in air=>Prop roots|Aerial roots
+Legume root nodules host bacteria that fix=>Nitrogen
+Fungus roots=>Mycorrhizae|Mycorrhiza
+Plant gives the fungus sugar and=>Amino acids`,
+`Region where leaves attach to the stem=>Node
+Region between nodes=>Internode
+Main axis of the plant=>Stem
+Stem tissues: epidermal, ground, and=>Vascular
+Onion is a modified stem called a=>Bulb
+Sharp modified stems=>Thorns
+Wide portion of a foliage leaf=>Blade
+Stalk attaching blade to stem=>Petiole
+Where the axillary bud originates=>Leaf axil
+Leaves that attach to objects=>Tendrils|Tendril
+Leaves that store food=>Bulbs|Bulb
+Single blade at each node=>Simple leaves|Simple
+Multiple leaflets=>Compound leaves|Compound
+Leaf morphology is useful for plant=>Identification
+Shoot system: stem, branches, and=>Leaves`,
+`Epidermal cells usually lack=>Chloroplasts
+Waxy layer impermeable to water=>Cuticle
+Leaf hairs=>Trichomes|Trichome
+Cells forming stomata=>Guard cells
+Pores in the epidermis=>Stomata|Stoma
+Stoma means=>Mouth
+Upper leaf surface=>Adaxial
+Lower leaf surface=>Abaxial
+Leaf design: export fixed carbon to=>Sinks
+Leaf design: gas exchange, CO2 in and what out=>O2|Oxygen
+Insect-trapping pitcher plant genus=>Nepenthes
+Rim of the pitcher=>Peristome
+Touch response of tendrils=>Thigmotropism
+Example of a plant with spines=>Cactus
+Leaves associated with reproductive structures=>Bracts|Bract
+Scales of bulbs serve as=>Storage|Storage tissue
+Leaf blade maximizes surface area while minimizing=>Volume`,
+`Main stalk of a flower or inflorescence=>Peduncle
+Outermost whorl=>Sepals
+Sepals collectively=>Calyx
+Second whorl, attracts pollinators=>Petals
+Petals collectively=>Corolla
+Calyx plus corolla=>Perianth
+Sepals and petals not distinguishable=>Tepals
+Stem axis holding the flower parts=>Receptacle
+Stalk of a single flower=>Pedicel
+Female organ=>Pistil|Gynoecium
+Where pollen lands=>Stigma
+Stalk connecting stigma to ovary=>Style
+Enlarged base of the pistil=>Ovary
+Rudimentary seeds=>Ovules
+Male organ=>Stamen|Androecium
+Thin stalk of the stamen=>Filament
+Part of the stamen that bears pollen=>Anther
+Pistil of a single carpel=>Simple pistil
+Pistil of fused carpels=>Compound pistil`,
+`Ripened ovary with seeds=>Fruit
+Primary function of fruit=>Seed dispersal|Distribute seeds
+Cavities where seeds form=>Locules
+Wall of the ripened ovary=>Pericarp
+Outermost pericarp layer=>Exocarp
+Middle pericarp layer=>Mesocarp
+Innermost pericarp layer=>Endocarp
+Fruit from a single ovary of a single flower=>Simple fruit
+One flower with many separate carpels=>Aggregate fruit
+Carpels of several flowers in one inflorescence=>Multiple fruit
+Receptacle becomes part of the fruit=>Accessory fruit
+Papaya=>Berry
+Squash=>Pepo
+Lemon=>Hesperidium
+Coconut=>Drupe
+Apple=>Pome
+Dry fruits that split open=>Dehiscent
+Dry fruits that stay closed=>Indehiscent
+Dry fruit from a compound ovary=>Capsule
+Single carpel, splits along two seams=>Legume
+Single carpel, splits along one seam=>Follicle
+Two carpels leaving a partition wall=>Silique
+Short silique=>Silicle
+One seed, ovary wall separable=>Achene
+Seed coat fused with ovary=>Caryopsis|Grain
+Fruit with wing-like outgrowths=>Samara
+Hard one-seeded fruit=>Nut
+Carpels separating into mericarps=>Schizocarp`];
+const IT=ID.map(t=>t.trim().split("\n").map(x=>{const[q,a]=x.split("=>"),al=a.split("|");return{q,al,a:al[0]}}));
+const LI={};C.forEach((c,i)=>(LI[c[0]]=LI[c[0]]||[]).push(...IT[i]));
+const nm=t=>t.toLowerCase().replace(/[^a-z0-9+]/g,"");
+const lev=(a,b)=>{let p=[...Array(b.length+1).keys()];for(let i=1;i<=a.length;i++){let c=[i];for(let j=1;j<=b.length;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]==b[j-1]?0:1));p=c}return p[b.length]};
+const ok=(g,x)=>{g=nm(g);return g&&x.al.some(a=>{a=nm(a);return g==a||(a.length>6&&lev(g,a)<=1)})};
+const idq=i=>run($("#q"+i),IT[i],"i"+i);
+function fin(k){const e=$("#fz"+k);e.hidden=false;run(e,LI[k],"F"+k)}
+function run(el,list,key,back){
+ const S={l:sh(list),n:0,s:0,m:[]};let d=0;
+ const ask=()=>{d=0;const x=S.l[S.n];
+  el.innerHTML=`<div class="bar"><i style="width:${S.n/S.l.length*100}%"></i></div><div class="meta">identification ${S.n+1} / ${S.l.length}</div><p class="qq">${x.q}</p><input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type your answer" aria-label="answer"><div id="fb"></div><button class="go">check</button>`;
+  const i=el.querySelector("input"),b=el.querySelector(".go"),f=el.querySelector("#fb");i.focus();
+  const go=()=>{if(d){S.n++;return S.n<S.l.length?ask():end()}
+   d=1;const r=ok(i.value,x);if(r)S.s++;else S.m.push(x);i.disabled=true;
+   f.innerHTML=r?`<div class="fb ok">correct</div>`:`<div class="fb no">answer: <b>${x.a}</b> <button id="ov">I was right</button></div>`;
+   if(!r)f.querySelector("#ov").onclick=()=>{S.s++;S.m.pop();f.innerHTML=`<div class="fb ok">counted as correct</div>`;b.focus()};
+   b.textContent=S.n+1<S.l.length?"next →":"results →";b.focus()};
+  b.onclick=go;el.onkeydown=e=>{if(e.key=="Enter"&&e.target.id!="ov"){e.preventDefault();go()}}};
+ const end=()=>{const p=Math.round(S.s/S.l.length*100);if(!(best[key]>=p)){best[key]=p;sv()}
+  el.innerHTML=`<p class="qq">${S.s} / ${S.l.length}<span class="o big">${p}%</span></p><div class="meta">best ${best[key]}%</div>`+(S.m.length?`<div class="meta">review these:</div><ul>${S.m.map(x=>`<li>${x.q} → <b>${x.a}</b></li>`).join("")}</ul>`:"")+`<button class="go" id="r1">restart_</button> ${back?`<button id="r3">all sets</button>`:""} ${S.m.length?`<button id="r2">retry missed</button>`:""}`;
+  el.querySelector("#r1").onclick=()=>run(el,list,key,back);const r3=el.querySelector("#r3");if(r3)r3.onclick=back;const r2=el.querySelector("#r2");if(r2)r2.onclick=()=>run(el,S.m,key+"m",back)};
+ ask()}
+Object.keys(LI).forEach(k=>$("#L"+k).insertAdjacentHTML("beforeend",`<div class="row"><button class="go" onclick="fin(${k})">final: all of lecture ${k} · ${LI[k].length} items_</button></div><div class="ch" id="fz${k}" hidden></div>`));
+C.forEach((_,i)=>idle(i));
+</script></body></html>
